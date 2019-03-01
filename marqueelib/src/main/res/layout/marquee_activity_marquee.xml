@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:switch="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fitsSystemWindows="false"
+    >
+
+<RelativeLayout
+    android:id="@+id/mainRelLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/contentRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--ToolBar布局-->
+        <!--main_toolbar_height=48dp-->
+        <RelativeLayout
+            android:id="@+id/nav"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize">
+
+            <ImageButton
+                android:id="@+id/menuBtn"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_top_return_white" />
+
+            <TextView
+                android:id="@+id/title_main_text"
+                style="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/menuBtn"
+                android:layout_toRightOf="@+id/menuBtn"
+                android:text="@string/marquee_title"
+                android:textColor="#fff"
+                android:gravity="center"/>
+
+            <!--<android.support.v7.widget.SwitchCompat-->
+            <!--android:checked="true"-->
+            <!--android:id="@+id/marqueeSwitch"-->
+            <!--android:layout_marginEnd="12dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+            <com.coocent.marquee.MarqueeSwitchButton
+                android:id="@+id/marqueeSwitch"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="center"
+                switch:offImage="@drawable/marquee_home_button_no"
+                switch:onImage="@drawable/marquee_home_button1_open"
+                switch:preferenceTitle="isMarqueeEnable"
+                switch:savePreference="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+            <com.coocent.marquee.MarqueeSwitchButton2
+                android:id="@+id/marqueeSwitch2_bg"
+                android:visibility="gone"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="center"
+                switch:offImage2="@drawable/marquee_eq_button_off_bg"
+                switch:onImage2="@drawable/marquee_eq_button_on_bg"
+                switch:preferenceTitle="isMarqueeEnable"
+                switch:savePreference="true"
+                android:layout_marginRight="8dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+            <com.coocent.marquee.MarqueeSwitchButton
+                android:id="@+id/marqueeSwitch2_icon"
+                android:visibility="gone"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="center"
+                switch:offImage="@drawable/marquee_eq_button_off_icon"
+                switch:onImage="@drawable/marquee_eq_button_on_icon"
+                switch:preferenceTitle="isMarqueeEnable"
+                switch:savePreference="true"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/radianRelLayout"
+            android:layout_below="@+id/nav"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:id="@+id/radianIcon"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/marquee_radian"
+                android:textColor="#FFFFFF"
+                android:drawableTop="@drawable/marquee_ic_revolving_lamp_radian"
+                android:singleLine="true" />
+            <com.coocent.marquee.MarqueeSeekBarView
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_toEndOf="@+id/radianIcon"
+                android:layout_toRightOf="@+id/radianIcon"
+                android:layout_toLeftOf="@+id/radianIcon"
+                android:layout_toStartOf="@+id/radianTv"
+                android:id="@+id/radianView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/radianTv"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:minWidth="24dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/widthRelLayout"
+            android:layout_below="@+id/radianRelLayout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:id="@+id/widthIcon"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/marquee_width"
+                android:textColor="#FFFFFF"
+                android:drawableTop="@drawable/marquee_ic_revolving_lamp_width"
+                android:singleLine="true"/>
+
+            <com.coocent.marquee.MarqueeSeekBarView
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_toEndOf="@+id/widthIcon"
+                android:layout_toRightOf="@+id/widthIcon"
+                android:layout_toStartOf="@+id/widthTv"
+                android:layout_toLeftOf="@+id/widthTv"
+                android:id="@+id/widthView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/widthTv"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:minWidth="24dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="6"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/speedRelLayout"
+            android:layout_below="@+id/widthRelLayout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+            <TextView
+                android:id="@+id/speedIcon"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/marquee_speed"
+                android:textColor="#FFFFFF"
+                android:drawableTop="@drawable/marquee_ic_revolving_lamp_speed"
+                android:singleLine="true"/>
+
+            <com.coocent.marquee.MarqueeSeekBarView
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:layout_toEndOf="@+id/speedIcon"
+                android:layout_toRightOf="@+id/speedIcon"
+                android:layout_toStartOf="@+id/speedTv"
+                android:layout_toLeftOf="@+id/speedTv"
+                android:id="@+id/speedView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/speedTv"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:minWidth="24dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="6"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/pickerTitleTv"
+            android:layout_margin="12dp"
+            android:layout_below="@id/speedRelLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/marquee_picker_title"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"/>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:layout_below="@+id/pickerTitleTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/marqueeRecView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </android.support.design.widget.CoordinatorLayout>
+
+        <!--<RelativeLayout-->
+        <!--android:layout_gravity="top"-->
+        <!--android:id="@+id/addRelLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="55dp"-->
+        <!--android:clickable="true"-->
+        <!--android:background="?android:attr/selectableItemBackground">-->
+        <!--<TextView-->
+        <!--android:id="@+id/addTv"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Add"-->
+        <!--android:drawableStart="@drawable/marquee_ic_revolving_lamp_color_add"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:textSize="20sp"/>-->
+        <!--<View-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#0D000000"/>-->
+        <!--</RelativeLayout>-->
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+<com.coocent.marquee.MarqueeSweepGradientView
+    android:id="@+id/sweepView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+</RelativeLayout>

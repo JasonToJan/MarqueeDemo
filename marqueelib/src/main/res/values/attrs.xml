@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwitchButton">
+        <attr name="onImage" format="integer"></attr>
+        <attr name="offImage" format="integer"></attr>
+        <attr name="savePreference" format="boolean"></attr>
+        <attr name="preferenceTitle" format="string"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton2">
+        <attr name="onImage2" format="reference" />
+        <attr name="offImage2" format="reference" />
+        <attr name="defaultState" format="boolean"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="MarqueeSweepGradientView">
+        <attr name="baseRotate" format="integer"/>
+        <attr name="effectiveWidth" format="integer"/>
+    </declare-styleable>
+</resources>

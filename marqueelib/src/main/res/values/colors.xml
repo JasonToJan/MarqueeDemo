@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    public static String theme_color[] = new String[]{"f7ce89", "ffc30d", "ff872f", "fd6451", "fe4748", "ff2f65", "cf4cff",
+    "5e84ff", "559dff", "55c9ff", "01d1da", "01dab4", "01da7c", "4dd404", "b4ed2b", "f1e904"
+    };
+    <color name="color_bright01">#f7ce89</color>
+    <color name="color_bright02">#ffc30d</color>
+    <color name="color_bright03">#ff872f</color>
+    <color name="color_bright04">#fd6451</color>
+    <color name="color_bright05">#fe4748</color>
+    <color name="color_bright06">#ff2f65</color>
+    <color name="color_bright07">#cf4cff</color>
+    <color name="color_bright08">#5e84ff</color>
+    <color name="color_bright09">#559dff</color>
+    <color name="color_bright10">#55c9ff</color>
+    <color name="color_bright11">#01d1da</color>
+    <color name="color_bright12">#01dab4</color>
+    <color name="color_bright13">#01da7c</color>
+    <color name="color_bright14">#4dd404</color>
+    <color name="color_bright15">#b4ed2b</color>
+    <color name="color_bright16">#f1e904</color>
+
+    <color name="colorAccent">#ffff5722</color>
+
+</resources>

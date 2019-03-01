@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="55dp">
+
+    <LinearLayout
+        android:id="@+id/contentLinLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <com.coocent.marquee.MarqueeBorderView
+            android:id="@+id/borderView"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#FFFFFF"/>
+
+        <View
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_width="1dp"
+            android:layout_height="40dp"
+            android:background="#0D000000"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground">
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/nameEt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:singleLine="true"
+                android:selectAllOnFocus="true"
+                android:gravity="center_vertical|start"
+                android:textAlignment="viewStart" />
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:gravity="center_vertical|start"
+                android:textAlignment="viewStart"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/pickerImg"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/marquee_ic_revolving_lamp_color_pick"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/deleteImg"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/marquee_ic_revolving_lamp_color_delete"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/addRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground">
+        <TextView
+            android:id="@+id/addTv"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/marquee_add"
+            android:drawableStart="@drawable/marquee_ic_revolving_lamp_color_add"
+            android:drawableLeft="@drawable/marquee_ic_revolving_lamp_color_add"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#0D000000"
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+
+</RelativeLayout>
